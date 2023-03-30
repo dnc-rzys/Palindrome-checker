@@ -3,10 +3,18 @@ import java.util.Scanner;
 class Main {
   public static void main(String[] args) {
 
-    Scanner scanner = new Scanner(System.in); //to get user input
+    //to get user input
+    Scanner scanner = new Scanner(System.in); 
 
+    // get user input continuously
+    while(true) { 
     System.out.println("Enter a string:");
     String str = scanner.nextLine();
+
+    // while loop ends when there is no input 
+    if(str.isEmpty()) {
+        break;
+    }
 
     String reverseStr = "";
     int strLength = str.length();
@@ -22,5 +30,8 @@ class Main {
     else {
       System.out.println(str + " is not a Palindrome String.");
     }
+  }
+    // prints when there is no input therefore program will end
+    System.out.println("Program ended.");
   }
 }
